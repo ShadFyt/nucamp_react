@@ -2901,6 +2901,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/reactstrap@npm:^8.7.2":
+  version: 8.7.2
+  resolution: "@types/reactstrap@npm:8.7.2"
+  dependencies:
+    reactstrap: "*"
+  checksum: d94ec000e300140cf2a3773f81bff19855ce00d82f67d626e17aedee993b5380f6ed06e1c17579d43729807d203acaa34a628aeabe1531581c2835e1746a55a0
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:0.0.8":
   version: 0.0.8
   resolution: "@types/resolve@npm:0.0.8"
@@ -11112,12 +11121,15 @@ fsevents@^1.2.7:
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
+    "@types/reactstrap": ^8.7.2
     bootstrap: 4.5.2
     react: ^17.0.2
     react-dom: ^17.0.2
     react-popper: 1.3.6
     react-scripts: 4.0.3
     reactstrap: 8.5.1
+    typeface-lobster: ^1.1.13
+    typeface-open-sans: ^1.1.13
     web-vitals: ^1.0.1
   languageName: unknown
   linkType: soft
@@ -13329,6 +13341,22 @@ fsevents@^1.2.7:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
+  languageName: node
+  linkType: hard
+
+"reactstrap@npm:*":
+  version: 8.10.0
+  resolution: "reactstrap@npm:8.10.0"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    classnames: ^2.2.3
+    prop-types: ^15.5.8
+    react-popper: ^1.3.6
+    react-transition-group: ^2.3.1
+  peerDependencies:
+    react: ">=16.3.0"
+    react-dom: ">=16.3.0"
+  checksum: ac30cf2f0b6840fcf14c65fbe7e1af4c5038672d2558617ce5fbeb4668f18009d19cd1f6c88950fd6f61becea07b085855d2a5cb700562d00f0eaaa176722413
   languageName: node
   linkType: hard
 
@@ -15659,6 +15687,20 @@ resolve@^2.0.0-next.3:
   version: 0.0.6
   resolution: "typedarray@npm:0.0.6"
   checksum: 33b39f3d0e8463985eeaeeacc3cb2e28bc3dfaf2a5ed219628c0b629d5d7b810b0eb2165f9f607c34871d5daa92ba1dc69f49051cf7d578b4cbd26c340b9d1b1
+  languageName: node
+  linkType: hard
+
+"typeface-lobster@npm:^1.1.13":
+  version: 1.1.13
+  resolution: "typeface-lobster@npm:1.1.13"
+  checksum: 292d2cac8afa6e21b0b9d09e621985015cc2731f17135f56a940ed4e9a4209b89f5c4d20558c45dc569d9449ba601138458fac0cafcc262eb0a7bc4056c85852
+  languageName: node
+  linkType: hard
+
+"typeface-open-sans@npm:^1.1.13":
+  version: 1.1.13
+  resolution: "typeface-open-sans@npm:1.1.13"
+  checksum: 2946f8e1d60ce6b9c6639f337f603f20cead6a1ef8c863006c24376a67cc87e2a0c9432024a912350fc4dac9af587b366873c0846aefa008d1f1178d470466ea
   languageName: node
   linkType: hard
 

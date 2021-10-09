@@ -12,6 +12,8 @@
     "react-popper": "1.3.6",
     "react-scripts": "4.0.3",
     "reactstrap": "8.5.1",
+    "typeface-lobster": "^1.1.13",
+    "typeface-open-sans": "^1.1.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -38,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@3.0.2"
+  "packageManager": "yarn@3.0.2",
+  "devDependencies": {
+    "@types/reactstrap": "^8.7.2"
+  }
 }
