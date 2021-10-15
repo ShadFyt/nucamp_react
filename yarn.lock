@@ -4354,6 +4354,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bootstrap-social@npm:5.1.1":
+  version: 5.1.1
+  resolution: "bootstrap-social@npm:5.1.1"
+  dependencies:
+    bootstrap: ~3
+    font-awesome: ~4.7
+  checksum: 9b4e2ef3f8f7f611a921978d0eb1fbd2a14c74045d09723f3f837895c43f01aa289cd10d64f26f3afbde723dfb9af8276ffc1b7f53f8925d9f96a353e23426a5
+  languageName: node
+  linkType: hard
+
 "bootstrap@npm:4.5.2":
   version: 4.5.2
   resolution: "bootstrap@npm:4.5.2"
@@ -4361,6 +4371,13 @@ __metadata:
     jquery: 1.9.1 - 3
     popper.js: ^1.16.1
   checksum: 6c98ca6eb432d704f18e1c8d83a592bc78064e0bd9b8e99a478fda25adba17349bf425811c31cb3863da6cb88eecf6ac50eb3bb9ab5721aea665432b4f618eb1
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:~3":
+  version: 3.4.1
+  resolution: "bootstrap@npm:3.4.1"
+  checksum: 5742035e8c541cd525780542771e7d56f63e5d4b2d902427bf182d3383e74a17c9074b6809f50d7f3de0585377e673339628b97cfdcde597ad69ecb1d2b562a6
   languageName: node
   linkType: hard
 
@@ -7407,6 +7424,13 @@ __metadata:
   dependencies:
     debug: ^3.0.0
   checksum: 02865fcd49f189194a33a56a2124617ffd82db91a3eb2371de359e5e9225cc1b16e15c8c1b276abd71c174eccc3be24d8f217fd96955a5f170c48f0fa10a1195
+  languageName: node
+  linkType: hard
+
+"font-awesome@npm:4.7.0, font-awesome@npm:~4.7":
+  version: 4.7.0
+  resolution: "font-awesome@npm:4.7.0"
+  checksum: fa223f6e3b27e97d2d09cdbf0c1363e2ad18d2a685fc045f54e86394db59f7c113482a819de3b6489f42a630a8ec5911b8e65718e45f7cace1c0a1b05d7fce08
   languageName: node
   linkType: hard
 
@@ -11123,6 +11147,8 @@ fsevents@^1.2.7:
     "@testing-library/user-event": ^12.1.10
     "@types/reactstrap": ^8.7.2
     bootstrap: 4.5.2
+    bootstrap-social: 5.1.1
+    font-awesome: 4.7.0
     react: ^17.0.2
     react-dom: ^17.0.2
     react-popper: 1.3.6
