@@ -13,15 +13,15 @@ import {
   Label,
 } from "reactstrap";
 import { Control, LocalForm, Errors } from "react-redux-form";
+import { Loading } from "./LoadingComponent";
 
 import { Link } from "react-router-dom";
-import { addComment } from "../redux/ActionCreators";
 
 function RenderCampsite({ campsite }) {
   return (
     <div className="col-md-5 m-1">
       <Card>
-        <CardImg top src={campsite.image} alt={campsite.name}></CardImg>
+        <CardImg top src={campsite.image} alt={campsite.name} />
         <CardBody>
           <CardText>{campsite.description}</CardText>
         </CardBody>
@@ -55,6 +55,28 @@ function RenderComments({ comments, addComment, campsiteId }) {
 }
 
 function CampsiteInfo(props) {
+  if (props.isLoading) {
+    return (
+      <div className="container">
+        <div className="row">
+          <Loading />
+        </div>
+      </div>
+    );
+  }
+
+  if (props.errMess) {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h4>{props.errMess}</h4>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (props.campsite) {
     return (
       <div className="container">
@@ -84,7 +106,6 @@ function CampsiteInfo(props) {
   return <div />;
 }
 
-const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
 class CommentForm extends React.Component {
@@ -154,7 +175,6 @@ class CommentForm extends React.Component {
                   name="author"
                   placeholder="Your Name"
                   validators={{
-                    required,
                     minLength: minLength(2),
                     maxLength: maxLength(15),
                   }}
@@ -165,7 +185,6 @@ class CommentForm extends React.Component {
                   show="touched"
                   component="div"
                   messages={{
-                    required: "Required",
                     minLength: "Must be at least 2 characters",
                     maxLength: "Must be 15 characters or less",
                   }}
