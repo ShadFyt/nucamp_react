@@ -7,9 +7,9 @@ import {
   Col,
   Row,
 } from "reactstrap";
-import { Control, LocalForm, Errors, Form } from "react-redux-form";
+import { Control, Errors, Form } from "react-redux-form";
 import { Link } from "react-router-dom";
-import { FadeTransform, Fade, Stagger } from "react-animation-components";
+import { FadeTransform } from "react-animation-components";
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !val || val.length <= len;
@@ -79,11 +79,9 @@ class Contact extends React.Component {
   }
 
   handleBlur = (field) => () => {
-    {
-      this.setState({
-        touched: { ...this.state.touched, [field]: true },
-      });
-    }
+    this.setState({
+      touched: { ...this.state.touched, [field]: true },
+    });
   };
 
   handleInputChange(event) {
@@ -103,12 +101,6 @@ class Contact extends React.Component {
   }
 
   render() {
-    const errors = this.validate(
-      this.state.firstName,
-      this.state.lastName,
-      this.state.phoneNum,
-      this.state.email
-    );
     return (
       <div className="container">
         <div className="row">
