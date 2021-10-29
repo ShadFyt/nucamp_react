@@ -1,4 +1,5 @@
 import React from "react";
+import { FadeTransform, Fade, Stagger } from "react-animation-components";
 import {
   Card,
   CardImg,
@@ -21,12 +22,19 @@ import { Link } from "react-router-dom";
 function RenderCampsite({ campsite }) {
   return (
     <div className="col-md-5 m-1">
-      <Card>
-        <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
-        <CardBody>
-          <CardText>{campsite.description}</CardText>
-        </CardBody>
-      </Card>
+      <FadeTransform
+        in
+        transformProps={{
+          exitTransform: "scale(0.5) translateY(-50%)",
+        }}
+      >
+        <Card>
+          <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
+          <CardBody>
+            <CardText>{campsite.description}</CardText>
+          </CardBody>
+        </Card>
+      </FadeTransform>
     </div>
   );
 }
@@ -36,18 +44,22 @@ function RenderComments({ comments, postComment, campsiteId }) {
     return (
       <div className="col-md-5 m-1">
         <h4>Comments</h4>
-        {comments.map((comment) => (
-          <p key={comment.id}>
-            {comment.text}
-            <br />
-            -- {comment.author},{" "}
-            {new Intl.DateTimeFormat("en-US", {
-              year: "numeric",
-              month: "short",
-              day: "2-digit",
-            }).format(new Date(Date.parse(comment.date)))}
-          </p>
-        ))}
+        <Stagger in>
+          {comments.map((comment) => (
+            <Fade in key={comment.id}>
+              <p>
+                {comment.text}
+                <br />
+                -- {comment.author},{" "}
+                {new Intl.DateTimeFormat("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "2-digit",
+                }).format(new Date(Date.parse(comment.date)))}
+              </p>
+            </Fade>
+          ))}
+        </Stagger>
         <CommentForm campsiteId={campsiteId} postComment={postComment} />
       </div>
     );
